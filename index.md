@@ -1,4 +1,4 @@
-# 📐 PANDUAN LENGKAP RATE LIMITING VEOGEN V3.2
+# 📐 PANDUAN LENGKAP RATE LIMITING VEOGEN V3 Beta
 
 > **🎯 Sistem Terbaru:** Staggered Start + Parallel Execution untuk performa maksimal!
 
@@ -7,7 +7,7 @@
 ## 📚 DAFTAR ISI
 
 1. [Apa itu Rate Limit?](#-apa-itu-rate-limit)
-2. [Sistem Baru v3.2: Staggered Start](#-sistem-baru-v32-staggered-start)
+2. [Sistem Baru v3 Beta: Staggered Start](#-sistem-baru-v32-staggered-start)
 3. [2 Mode Rate Limiting](#-2-mode-rate-limiting)
 4. [Rekomendasi Formula by Sistem](#-rekomendasi-formula-by-sistem)
 5. [Cara Kerja Worker Rotation](#-cara-kerja-worker-rotation)
@@ -41,7 +41,7 @@ Bayangkan restoran McDonald's:
    → Generate gagal!
 ```
 
-### **Skenario Dengan Rate Limiting (v3.2):**
+### **Skenario Dengan Rate Limiting (v3.06 Beta):**
 ```
 ✅ Pelanggan 1 → Masuk antrian
    Tunggu 15 detik...
@@ -58,7 +58,7 @@ Bayangkan restoran McDonald's:
 
 ---
 
-## 🚀 SISTEM BARU V3.2: STAGGERED START
+## 🚀 SISTEM BARU V3.06 Beta: STAGGERED START
 
 ### **Apa itu Staggered Start?**
 
@@ -100,7 +100,7 @@ Bayangkan restoran McDonald's:
 
 ### **Perbedaan dengan Sistem Lama:**
 
-| Aspek | Sistem Lama (v3.1) | Sistem Baru (v3.2) |
+| Aspek | Sistem Lama (v3.1) | Sistem Baru (v3.06 Beta) |
 |-------|-------------------|-------------------|
 | **Start Workers** | Bersamaan (burst) ❌ | Bertahap (staggered) ✅ |
 | **Blocking** | Ada queue blocking ❌ | Tidak ada blocking ✅ |
@@ -805,16 +805,16 @@ Tidak bisa connect ke server Google/GenAI. Problem network/internet.
 
 ---
 
-### **5. Queue Timeout (v3.1 Only - Tidak Ada di v3.2)**
+### **5. Queue Timeout (v3.1 Only - Tidak Ada di v3.06 Beta)**
 
 **Update:**
 ```
-✅ Error ini TIDAK MUNGKIN terjadi di v3.2!
+✅ Error ini TIDAK MUNGKIN terjadi di v3.06 Beta!
 ✅ Anti-Collision Queue sudah DISABLED
 ✅ No more queue blocking!
 
 Jika Anda masih lihat error ini:
-→ Update aplikasi ke v3.2 latest!
+→ Update aplikasi ke v3.06 Beta latest!
 ```
 
 ---
@@ -1095,7 +1095,7 @@ video_download/
 ```
 [12:00:00] ✅ Application started successfully
 [12:00:00] ℹ️ Ready to generate videos
-[12:00:00] ✅ Rate limiting: Staggered start enabled (v3.2)
+[12:00:00] ✅ Rate limiting: Staggered start enabled (v3.06 Beta)
 
 [12:00:00] ℹ️ Starting generation (ultra - t2v)
 [12:00:00] ℹ️ Prompts: 100, Workers: 12
