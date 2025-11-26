@@ -1375,51 +1375,9 @@ Why bad:
 ✅ Avoid contradictions ("day and night")
 ✅ Test prompts individually first
 ```
-
 ---
 
-### **5. Resource Management**
-
-**Disk Space:**
-```
-Video (1080p): ~50-150MB per video
-Video (4K upscaled): ~200-500MB per video
-Images: ~2-5MB per image
-
-Planning:
-- 100 videos 1080p = ~10GB
-- 100 videos 4K = ~30GB
-- Always keep 20% free space
-```
-
-**RAM Usage:**
-```
-1-4 workers: ~2GB RAM
-5-12 workers: ~4GB RAM
-13-20 workers: ~6GB RAM
-20+ workers: ~8GB+ RAM
-
-Recommended:
-- 8GB RAM for 1-12 workers
-- 16GB RAM for 12-20 workers
-- 32GB RAM for 20+ workers
-```
-
-**CPU Usage:**
-```
-Workers mostly wait for API (tidak CPU intensive)
-CPU spike saat:
-- FFmpeg muting (10-20% per video)
-- Topaz upscaling (80-100% per video)
-
-Recommendation:
-- Disable auto-upscale saat batch besar
-- Upscale manual nanti (batch processing)
-```
-
----
-
-### **6. Monitoring & Alerts**
+### **5. Monitoring & Alerts**
 
 **Watch These Metrics:**
 ```
@@ -1634,7 +1592,7 @@ Set reminder:
 
 ### **Key Takeaways:**
 
-1. **Sistem v3.2 = Staggered Start + Parallel Execution**
+1. **Sistem v3.06 Beta = Staggered Start + Parallel Execution**
    - Workers start bertahap (delay 10-20s)
    - Setelah start, semua jalan parallel
    - Tidak ada queue blocking
@@ -1683,28 +1641,9 @@ Set reminder:
 - Keep cookies fresh
 - Generate at off-peak hours
 
----
-
-### **Version History:**
-
-**v3.2 (Current):**
-- ✅ Staggered start system
-- ✅ Parallel execution
-- ✅ No queue blocking
-- ✅ Simplified 2-mode UI
-- ✅ Auto-detect account count
-- ✅ Formula by Sistem
-
-**v3.1 (Previous):**
-- Anti-Collision Queue (removed)
-- Serial execution (slow)
-- Complex UI (simplified)
-
----
-
 ### **Credits:**
 
-Developed with ❤️ for content creators
+Developed with ❤️
 
 ---
 
